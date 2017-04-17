@@ -1,7 +1,7 @@
 # test coverage for  [geolib (v2.0.22)](http://github.com/manuelbieh/Geolib)  [![npm package](https://img.shields.io/npm/v/npmtest-geolib.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-geolib) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-geolib.svg)](https://travis-ci.org/npmtest/node-npmtest-geolib)
 #### Library to perform geo specific tasks
 
-[![NPM](https://nodei.co/npm/geolib.png?downloads=true)](https://www.npmjs.com/package/geolib)
+[![NPM](https://nodei.co/npm/geolib.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/geolib)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-geolib/tree/alpha)|
 |--:|:--|
@@ -9,11 +9,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-geolib/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-geolib/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-geolib/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-geolib/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-geolib/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-geolib/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-geolib/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-geolib/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-geolib/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-geolib%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-geolib/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-geolib/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-geolib/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-geolib/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-geolib%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-geolib/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-geolib/build/test-report.html](https://npmtest.github.io/node-npmtest-geolib/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-geolib/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-geolib/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-geolib/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-geolib/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-geolib/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-geolib/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-geolib/build/screenCapture.npmPackageListing.svg)
 
@@ -79,13 +85,11 @@
     "main": "dist/geolib.js",
     "maintainers": [
         {
-            "name": "manuelbieh",
-            "email": "node@manuelbieh.de"
+            "name": "manuelbieh"
         }
     ],
     "name": "geolib",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+ssh://git@github.com/manuelbieh/geolib.git"
