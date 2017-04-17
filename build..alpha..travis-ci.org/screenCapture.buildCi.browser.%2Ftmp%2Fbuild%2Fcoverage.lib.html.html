@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-geolib/geolib/dist/geolib.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-geolib/node_modules/geolib/dist/geolib.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-geolib">npmtest-geolib (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-geolib/geolib/dist/geolib.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-geolib/node_modules/geolib/dist/geolib.js</span></h1>
     <h2>
         
         Statements: <span class="metric">5.53% <small>(21 / 380)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-geolib/geolib/dist/</a> &#187; geolib.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-geolib/node_modules/geolib/dist/</a> » geolib.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -2989,7 +2987,7 @@
 &nbsp;
     "use strict";
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function Geolib() {</span>}
+<span class="fstat-no" title="function not covered">    function Geolib() {</span>}
 &nbsp;
     // Constants
     Geolib.TO_RAD = Math.PI / 180;
@@ -3039,7 +3037,7 @@
         extend: {
             value: function(methods, overwrite) {
                 for(var prop in methods) {
-                    <span class="missing-if-branch" title="else path not taken" >E</span>if(typeof geolib.prototype[prop] === 'undefined' || <span class="branch-1 cbranch-no" title="branch not covered" >overwrite === true)</span> {
+                    <span class="missing-if-branch" title="else path not taken">E</span>if(typeof geolib.prototype[prop] === 'undefined' || <span class="branch-1 cbranch-no" title="branch not covered">overwrite === true)</span> {
                         if(typeof methods[prop] === 'function' &amp;&amp; typeof methods[prop].bind === 'function') {
                             geolib.prototype[prop] = methods[prop].bind(geolib);
                         } else {
@@ -3051,15 +3049,15 @@
         }
     });
 &nbsp;
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof(Number.prototype.toRad) === 'undefined') {
-        Number.prototype.toRad = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >            return this * Geolib.TO_RAD;</span>
+    <span class="missing-if-branch" title="else path not taken">E</span>if (typeof(Number.prototype.toRad) === 'undefined') {
+        Number.prototype.toRad = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">            return this * Geolib.TO_RAD;</span>
         };
     }
 &nbsp;
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof(Number.prototype.toDeg) === 'undefined') {
-        Number.prototype.toDeg = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >            return this * Geolib.TO_DEG;</span>
+    <span class="missing-if-branch" title="else path not taken">E</span>if (typeof(Number.prototype.toDeg) === 'undefined') {
+        Number.prototype.toDeg = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">            return this * Geolib.TO_DEG;</span>
         };
     }
 &nbsp;
@@ -3072,12 +3070,12 @@
 &nbsp;
         distance: null,
 &nbsp;
-        getKeys: <span class="fstat-no" title="function not covered" >function(point) {</span>
+        getKeys: <span class="fstat-no" title="function not covered">function(point) {</span>
 &nbsp;
             // GeoJSON Array [longitude, latitude(, elevation)]
-<span class="cstat-no" title="statement not covered" >            if(Object.prototype.toString.call(point) == '[object Array]') {</span>
+<span class="cstat-no" title="statement not covered">            if(Object.prototype.toString.call(point) == '[object Array]') {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                return {</span>
+<span class="cstat-no" title="statement not covered">                return {</span>
                     longitude: point.length &gt;= 1 ? 0 : undefined,
                     latitude: point.length &gt;= 2 ? 1 : undefined,
                     elevation: point.length &gt;= 3 ? 2 : undefined
@@ -3085,34 +3083,34 @@
 &nbsp;
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var getKey = <span class="fstat-no" title="function not covered" >function(possibleValues) {</span></span>
+<span class="cstat-no" title="statement not covered">            var getKey = <span class="fstat-no" title="function not covered">function(possibleValues) {</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                var key;</span>
+<span class="cstat-no" title="statement not covered">                var key;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                possibleValues.every(<span class="fstat-no" title="function not covered" >function(val) {</span></span>
+<span class="cstat-no" title="statement not covered">                possibleValues.every(<span class="fstat-no" title="function not covered">function(val) {</span></span>
                     // TODO: check if point is an object
-<span class="cstat-no" title="statement not covered" >                    if(typeof point != 'object') {</span>
-<span class="cstat-no" title="statement not covered" >                        return true;</span>
+<span class="cstat-no" title="statement not covered">                    if(typeof point != 'object') {</span>
+<span class="cstat-no" title="statement not covered">                        return true;</span>
                     }
-<span class="cstat-no" title="statement not covered" >                    return point.hasOwnProperty(val) ? (<span class="fstat-no" title="function not covered" >function() {</span> <span class="cstat-no" title="statement not covered" >key = val; <span class="cstat-no" title="statement not covered" ></span>return false; </span>}()) : true;</span>
+<span class="cstat-no" title="statement not covered">                    return point.hasOwnProperty(val) ? (<span class="fstat-no" title="function not covered">function() {</span> <span class="cstat-no" title="statement not covered">key = val; <span class="cstat-no" title="statement not covered"></span>return false; </span>}()) : true;</span>
                 });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                return key;</span>
+<span class="cstat-no" title="statement not covered">                return key;</span>
 &nbsp;
             };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var longitude = getKey(['lng', 'lon', 'longitude']);</span>
-<span class="cstat-no" title="statement not covered" >            var latitude = getKey(['lat', 'latitude']);</span>
-<span class="cstat-no" title="statement not covered" >            var elevation = getKey(['alt', 'altitude', 'elevation', 'elev']);</span>
+<span class="cstat-no" title="statement not covered">            var longitude = getKey(['lng', 'lon', 'longitude']);</span>
+<span class="cstat-no" title="statement not covered">            var latitude = getKey(['lat', 'latitude']);</span>
+<span class="cstat-no" title="statement not covered">            var elevation = getKey(['alt', 'altitude', 'elevation', 'elev']);</span>
 &nbsp;
             // return undefined if not at least one valid property was found
-<span class="cstat-no" title="statement not covered" >            if(typeof latitude == 'undefined' &amp;&amp;</span>
+<span class="cstat-no" title="statement not covered">            if(typeof latitude == 'undefined' &amp;&amp;</span>
                 typeof longitude == 'undefined' &amp;&amp;
                 typeof elevation == 'undefined') {
-<span class="cstat-no" title="statement not covered" >                return undefined;</span>
+<span class="cstat-no" title="statement not covered">                return undefined;</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return {</span>
+<span class="cstat-no" title="statement not covered">            return {</span>
                 latitude: latitude,
                 longitude: longitude,
                 elevation: elevation
@@ -3122,86 +3120,86 @@
 &nbsp;
         // returns latitude of a given point, converted to decimal
         // set raw to true to avoid conversion
-        getLat: <span class="fstat-no" title="function not covered" >function(point, raw) {</span>
-<span class="cstat-no" title="statement not covered" >            return raw === true ? point[this.getKeys(point).latitude] : this.useDecimal(point[this.getKeys(point).latitude]);</span>
+        getLat: <span class="fstat-no" title="function not covered">function(point, raw) {</span>
+<span class="cstat-no" title="statement not covered">            return raw === true ? point[this.getKeys(point).latitude] : this.useDecimal(point[this.getKeys(point).latitude]);</span>
         },
 &nbsp;
         // Alias for getLat
-        latitude: <span class="fstat-no" title="function not covered" >function(point) {</span>
-<span class="cstat-no" title="statement not covered" >            return this.getLat.call(this, point);</span>
+        latitude: <span class="fstat-no" title="function not covered">function(point) {</span>
+<span class="cstat-no" title="statement not covered">            return this.getLat.call(this, point);</span>
         },
 &nbsp;
         // returns longitude of a given point, converted to decimal
         // set raw to true to avoid conversion
-        getLon: <span class="fstat-no" title="function not covered" >function(point, raw) {</span>
-<span class="cstat-no" title="statement not covered" >            return raw === true ? point[this.getKeys(point).longitude] : this.useDecimal(point[this.getKeys(point).longitude]);</span>
+        getLon: <span class="fstat-no" title="function not covered">function(point, raw) {</span>
+<span class="cstat-no" title="statement not covered">            return raw === true ? point[this.getKeys(point).longitude] : this.useDecimal(point[this.getKeys(point).longitude]);</span>
         },
 &nbsp;
         // Alias for getLon
-        longitude: <span class="fstat-no" title="function not covered" >function(point) {</span>
-<span class="cstat-no" title="statement not covered" >            return this.getLon.call(this, point);</span>
+        longitude: <span class="fstat-no" title="function not covered">function(point) {</span>
+<span class="cstat-no" title="statement not covered">            return this.getLon.call(this, point);</span>
         },
 &nbsp;
-        getElev: <span class="fstat-no" title="function not covered" >function(point) {</span>
-<span class="cstat-no" title="statement not covered" >            return point[this.getKeys(point).elevation];</span>
+        getElev: <span class="fstat-no" title="function not covered">function(point) {</span>
+<span class="cstat-no" title="statement not covered">            return point[this.getKeys(point).elevation];</span>
         },
 &nbsp;
         // Alias for getElev
-        elevation: <span class="fstat-no" title="function not covered" >function(point) {</span>
-<span class="cstat-no" title="statement not covered" >            return this.getElev.call(this, point);</span>
+        elevation: <span class="fstat-no" title="function not covered">function(point) {</span>
+<span class="cstat-no" title="statement not covered">            return this.getElev.call(this, point);</span>
         },
 &nbsp;
-        coords: <span class="fstat-no" title="function not covered" >function(point, raw) {</span>
+        coords: <span class="fstat-no" title="function not covered">function(point, raw) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var retval = {</span>
+<span class="cstat-no" title="statement not covered">            var retval = {</span>
                 latitude: raw === true ? point[this.getKeys(point).latitude] : this.useDecimal(point[this.getKeys(point).latitude]),
                 longitude: raw === true ? point[this.getKeys(point).longitude] : this.useDecimal(point[this.getKeys(point).longitude])
             };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var elev = point[this.getKeys(point).elevation];</span>
+<span class="cstat-no" title="statement not covered">            var elev = point[this.getKeys(point).elevation];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if(typeof elev !== 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >                retval['elevation'] = elev;</span>
+<span class="cstat-no" title="statement not covered">            if(typeof elev !== 'undefined') {</span>
+<span class="cstat-no" title="statement not covered">                retval['elevation'] = elev;</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return retval;</span>
+<span class="cstat-no" title="statement not covered">            return retval;</span>
 &nbsp;
         },
 &nbsp;
         // Alias for coords
-        ll: <span class="fstat-no" title="function not covered" >function(point, raw) {</span>
-<span class="cstat-no" title="statement not covered" >            return this.coords.call(this, point, raw);</span>
+        ll: <span class="fstat-no" title="function not covered">function(point, raw) {</span>
+<span class="cstat-no" title="statement not covered">            return this.coords.call(this, point, raw);</span>
         },
 &nbsp;
 &nbsp;
         // checks if a variable contains a valid latlong object
-        validate: <span class="fstat-no" title="function not covered" >function(point) {</span>
+        validate: <span class="fstat-no" title="function not covered">function(point) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var keys = this.getKeys(point);</span>
+<span class="cstat-no" title="statement not covered">            var keys = this.getKeys(point);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if(typeof keys === 'undefined' || typeof keys.latitude === 'undefined' || keys.longitude === 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >                return false;</span>
+<span class="cstat-no" title="statement not covered">            if(typeof keys === 'undefined' || typeof keys.latitude === 'undefined' || keys.longitude === 'undefined') {</span>
+<span class="cstat-no" title="statement not covered">                return false;</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var lat = point[keys.latitude];</span>
-<span class="cstat-no" title="statement not covered" >            var lng = point[keys.longitude];</span>
+<span class="cstat-no" title="statement not covered">            var lat = point[keys.latitude];</span>
+<span class="cstat-no" title="statement not covered">            var lng = point[keys.longitude];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if(typeof lat === 'undefined' || !this.isDecimal(lat) &amp;&amp; !this.isSexagesimal(lat)) {</span>
-<span class="cstat-no" title="statement not covered" >                return false;</span>
+<span class="cstat-no" title="statement not covered">            if(typeof lat === 'undefined' || !this.isDecimal(lat) &amp;&amp; !this.isSexagesimal(lat)) {</span>
+<span class="cstat-no" title="statement not covered">                return false;</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if(typeof lng === 'undefined' || !this.isDecimal(lng) &amp;&amp; !this.isSexagesimal(lng)) {</span>
-<span class="cstat-no" title="statement not covered" >                return false;</span>
+<span class="cstat-no" title="statement not covered">            if(typeof lng === 'undefined' || !this.isDecimal(lng) &amp;&amp; !this.isSexagesimal(lng)) {</span>
+<span class="cstat-no" title="statement not covered">                return false;</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            lat = this.useDecimal(lat);</span>
-<span class="cstat-no" title="statement not covered" >            lng = this.useDecimal(lng);</span>
+<span class="cstat-no" title="statement not covered">            lat = this.useDecimal(lat);</span>
+<span class="cstat-no" title="statement not covered">            lng = this.useDecimal(lng);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if(lat &lt; this.minLat || lat &gt; this.maxLat || lng &lt; this.minLon || lng &gt; this.maxLon) {</span>
-<span class="cstat-no" title="statement not covered" >                return false;</span>
+<span class="cstat-no" title="statement not covered">            if(lat &lt; this.minLat || lat &gt; this.maxLat || lng &lt; this.minLon || lng &gt; this.maxLon) {</span>
+<span class="cstat-no" title="statement not covered">                return false;</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return true;</span>
+<span class="cstat-no" title="statement not covered">            return true;</span>
 &nbsp;
         },
 &nbsp;
@@ -3217,28 +3215,28 @@
         * @param    integer   Precision (in decimal cases)
         * @return   integer   Distance (in meters)
         */
-        getDistance: <span class="fstat-no" title="function not covered" >function(start, end, accuracy, precision) {</span>
+        getDistance: <span class="fstat-no" title="function not covered">function(start, end, accuracy, precision) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            accuracy = Math.floor(accuracy) || 1;</span>
-<span class="cstat-no" title="statement not covered" >            precision = Math.floor(precision) || 0;</span>
+<span class="cstat-no" title="statement not covered">            accuracy = Math.floor(accuracy) || 1;</span>
+<span class="cstat-no" title="statement not covered">            precision = Math.floor(precision) || 0;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var s = this.coords(start);</span>
-<span class="cstat-no" title="statement not covered" >            var e = this.coords(end);</span>
+<span class="cstat-no" title="statement not covered">            var s = this.coords(start);</span>
+<span class="cstat-no" title="statement not covered">            var e = this.coords(end);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var a = 6378137, b = 6356752.314245,  f = 1/298.257223563; </span> // WGS-84 ellipsoid params
-<span class="cstat-no" title="statement not covered" >            var L = (e['longitude']-s['longitude']).toRad();</span>
+<span class="cstat-no" title="statement not covered">            var a = 6378137, b = 6356752.314245,  f = 1/298.257223563; </span> // WGS-84 ellipsoid params
+<span class="cstat-no" title="statement not covered">            var L = (e['longitude']-s['longitude']).toRad();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var cosSigma, sigma, sinAlpha, cosSqAlpha, cos2SigmaM, sinSigma;</span>
+<span class="cstat-no" title="statement not covered">            var cosSigma, sigma, sinAlpha, cosSqAlpha, cos2SigmaM, sinSigma;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var U1 = Math.atan((1-f) * Math.tan(parseFloat(s['latitude']).toRad()));</span>
-<span class="cstat-no" title="statement not covered" >            var U2 = Math.atan((1-f) * Math.tan(parseFloat(e['latitude']).toRad()));</span>
-<span class="cstat-no" title="statement not covered" >            var sinU1 = Math.sin(U1), cosU1 = Math.cos(U1);</span>
-<span class="cstat-no" title="statement not covered" >            var sinU2 = Math.sin(U2), cosU2 = Math.cos(U2);</span>
+<span class="cstat-no" title="statement not covered">            var U1 = Math.atan((1-f) * Math.tan(parseFloat(s['latitude']).toRad()));</span>
+<span class="cstat-no" title="statement not covered">            var U2 = Math.atan((1-f) * Math.tan(parseFloat(e['latitude']).toRad()));</span>
+<span class="cstat-no" title="statement not covered">            var sinU1 = Math.sin(U1), cosU1 = Math.cos(U1);</span>
+<span class="cstat-no" title="statement not covered">            var sinU2 = Math.sin(U2), cosU2 = Math.cos(U2);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var lambda = L, lambdaP, iterLimit = 100;</span>
-<span class="cstat-no" title="statement not covered" >            do {</span>
-<span class="cstat-no" title="statement not covered" >                var sinLambda = Math.sin(lambda), cosLambda = Math.cos(lambda);</span>
-<span class="cstat-no" title="statement not covered" >                sinSigma = (</span>
+<span class="cstat-no" title="statement not covered">            var lambda = L, lambdaP, iterLimit = 100;</span>
+<span class="cstat-no" title="statement not covered">            do {</span>
+<span class="cstat-no" title="statement not covered">                var sinLambda = Math.sin(lambda), cosLambda = Math.cos(lambda);</span>
+<span class="cstat-no" title="statement not covered">                sinSigma = (</span>
                     Math.sqrt(
                         (
                             cosU2 * sinLambda
@@ -3251,28 +3249,28 @@
                         )
                     )
                 );
-<span class="cstat-no" title="statement not covered" >                if (sinSigma === 0) {</span>
-<span class="cstat-no" title="statement not covered" >                    return geolib.distance = 0; </span> // co-incident points
+<span class="cstat-no" title="statement not covered">                if (sinSigma === 0) {</span>
+<span class="cstat-no" title="statement not covered">                    return geolib.distance = 0; </span> // co-incident points
                 }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                cosSigma = sinU1 * sinU2 + cosU1 * cosU2 * cosLambda;</span>
-<span class="cstat-no" title="statement not covered" >                sigma = Math.atan2(sinSigma, cosSigma);</span>
-<span class="cstat-no" title="statement not covered" >                sinAlpha = cosU1 * cosU2 * sinLambda / sinSigma;</span>
-<span class="cstat-no" title="statement not covered" >                cosSqAlpha = 1 - sinAlpha * sinAlpha;</span>
-<span class="cstat-no" title="statement not covered" >                cos2SigmaM = cosSigma - 2 * sinU1 * sinU2 / cosSqAlpha;</span>
+<span class="cstat-no" title="statement not covered">                cosSigma = sinU1 * sinU2 + cosU1 * cosU2 * cosLambda;</span>
+<span class="cstat-no" title="statement not covered">                sigma = Math.atan2(sinSigma, cosSigma);</span>
+<span class="cstat-no" title="statement not covered">                sinAlpha = cosU1 * cosU2 * sinLambda / sinSigma;</span>
+<span class="cstat-no" title="statement not covered">                cosSqAlpha = 1 - sinAlpha * sinAlpha;</span>
+<span class="cstat-no" title="statement not covered">                cos2SigmaM = cosSigma - 2 * sinU1 * sinU2 / cosSqAlpha;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                if (isNaN(cos2SigmaM)) {</span>
-<span class="cstat-no" title="statement not covered" >                    cos2SigmaM = 0; </span> // equatorial line: cosSqAlpha=0 (§6)
+<span class="cstat-no" title="statement not covered">                if (isNaN(cos2SigmaM)) {</span>
+<span class="cstat-no" title="statement not covered">                    cos2SigmaM = 0; </span> // equatorial line: cosSqAlpha=0 (§6)
                 }
-<span class="cstat-no" title="statement not covered" >                var C = (</span>
+<span class="cstat-no" title="statement not covered">                var C = (</span>
                     f / 16 * cosSqAlpha * (
                         4 + f * (
                             4 - 3 * cosSqAlpha
                         )
                     )
                 );
-<span class="cstat-no" title="statement not covered" >                lambdaP = lambda;</span>
-<span class="cstat-no" title="statement not covered" >                lambda = (</span>
+<span class="cstat-no" title="statement not covered">                lambdaP = lambda;</span>
+<span class="cstat-no" title="statement not covered">                lambda = (</span>
                     L + (
                         1 - C
                     ) * f * sinAlpha * (
@@ -3286,11 +3284,11 @@
 &nbsp;
             } while (Math.abs(lambda-lambdaP) &gt; 1e-12 &amp;&amp; --iterLimit&gt;0);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if (iterLimit === 0) {</span>
-<span class="cstat-no" title="statement not covered" >                return NaN; </span> // formula failed to converge
+<span class="cstat-no" title="statement not covered">            if (iterLimit === 0) {</span>
+<span class="cstat-no" title="statement not covered">                return NaN; </span> // formula failed to converge
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var uSq = (</span>
+<span class="cstat-no" title="statement not covered">            var uSq = (</span>
                 cosSqAlpha * (
                     a * a - b * b
                 ) / (
@@ -3298,7 +3296,7 @@
                 )
             );
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var A = (</span>
+<span class="cstat-no" title="statement not covered">            var A = (</span>
                 1 + uSq / 16384 * (
                     4096 + uSq * (
                         -768 + uSq * (
@@ -3308,7 +3306,7 @@
                 )
             );
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var B = (</span>
+<span class="cstat-no" title="statement not covered">            var B = (</span>
                 uSq / 1024 * (
                     256 + uSq * (
                         -128 + uSq * (
@@ -3318,7 +3316,7 @@
                 )
             );
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var deltaSigma = (</span>
+<span class="cstat-no" title="statement not covered">            var deltaSigma = (</span>
                 B * sinSigma * (
                     cos2SigmaM + B / 4 * (
                         cosSigma * (
@@ -3332,17 +3330,17 @@
                 )
             );
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var distance = b * A * (sigma - deltaSigma);</span>
+<span class="cstat-no" title="statement not covered">            var distance = b * A * (sigma - deltaSigma);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            distance = distance.toFixed(precision); </span>// round to 1mm precision
+<span class="cstat-no" title="statement not covered">            distance = distance.toFixed(precision); </span>// round to 1mm precision
 &nbsp;
             //if (start.hasOwnProperty(elevation) &amp;&amp; end.hasOwnProperty(elevation)) {
-<span class="cstat-no" title="statement not covered" >            if (typeof this.elevation(start) !== 'undefined' &amp;&amp; typeof this.elevation(end) !== 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >                var climb = Math.abs(this.elevation(start) - this.elevation(end));</span>
-<span class="cstat-no" title="statement not covered" >                distance = Math.sqrt(distance * distance + climb * climb);</span>
+<span class="cstat-no" title="statement not covered">            if (typeof this.elevation(start) !== 'undefined' &amp;&amp; typeof this.elevation(end) !== 'undefined') {</span>
+<span class="cstat-no" title="statement not covered">                var climb = Math.abs(this.elevation(start) - this.elevation(end));</span>
+<span class="cstat-no" title="statement not covered">                distance = Math.sqrt(distance * distance + climb * climb);</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return this.distance = Math.round(distance * Math.pow(10, precision) / accuracy) * accuracy / Math.pow(10, precision);</span>
+<span class="cstat-no" title="statement not covered">            return this.distance = Math.round(distance * Math.pow(10, precision) / accuracy) * accuracy / Math.pow(10, precision);</span>
 &nbsp;
             /*
             // note: to return initial/final bearings in addition to distance, use something like:
@@ -3364,11 +3362,11 @@
         * @param    integer   Accuracy (in meters)
         * @return   integer   Distance (in meters)
         */
-        getDistanceSimple: <span class="fstat-no" title="function not covered" >function(start, end, accuracy) {</span>
+        getDistanceSimple: <span class="fstat-no" title="function not covered">function(start, end, accuracy) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            accuracy = Math.floor(accuracy) || 1;</span>
+<span class="cstat-no" title="statement not covered">            accuracy = Math.floor(accuracy) || 1;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var distance =</span>
+<span class="cstat-no" title="statement not covered">            var distance =</span>
                 Math.round(
                     Math.acos(
                         Math.sin(
@@ -3389,7 +3387,7 @@
                     ) * this.radius
                 );
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return geolib.distance = Math.floor(Math.round(distance/accuracy)*accuracy);</span>
+<span class="cstat-no" title="statement not covered">            return geolib.distance = Math.floor(Math.round(distance/accuracy)*accuracy);</span>
 &nbsp;
         },
 &nbsp;
@@ -3400,51 +3398,51 @@
         * @param        array       Collection of coords [{latitude: 51.510, longitude: 7.1321}, {latitude: 49.1238, longitude: "8° 30' W"}, ...]
         * @return       object      {latitude: centerLat, longitude: centerLng}
         */
-        getCenter: <span class="fstat-no" title="function not covered" >function(coords) {</span>
+        getCenter: <span class="fstat-no" title="function not covered">function(coords) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var coordsArray = coords;</span>
-<span class="cstat-no" title="statement not covered" >            if(typeof coords === 'object' &amp;&amp; !(coords instanceof Array)) {</span>
+<span class="cstat-no" title="statement not covered">            var coordsArray = coords;</span>
+<span class="cstat-no" title="statement not covered">            if(typeof coords === 'object' &amp;&amp; !(coords instanceof Array)) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                coordsArray = [];</span>
+<span class="cstat-no" title="statement not covered">                coordsArray = [];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                for(var key in coords) {</span>
-<span class="cstat-no" title="statement not covered" >                    coordsArray.push(</span>
+<span class="cstat-no" title="statement not covered">                for(var key in coords) {</span>
+<span class="cstat-no" title="statement not covered">                    coordsArray.push(</span>
                         this.coords(coords[key])
                     );
                 }
 &nbsp;
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if(!coordsArray.length) {</span>
-<span class="cstat-no" title="statement not covered" >                return false;</span>
+<span class="cstat-no" title="statement not covered">            if(!coordsArray.length) {</span>
+<span class="cstat-no" title="statement not covered">                return false;</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var X = 0.0;</span>
-<span class="cstat-no" title="statement not covered" >            var Y = 0.0;</span>
-<span class="cstat-no" title="statement not covered" >            var Z = 0.0;</span>
-<span class="cstat-no" title="statement not covered" >            var lat, lon, hyp;</span>
+<span class="cstat-no" title="statement not covered">            var X = 0.0;</span>
+<span class="cstat-no" title="statement not covered">            var Y = 0.0;</span>
+<span class="cstat-no" title="statement not covered">            var Z = 0.0;</span>
+<span class="cstat-no" title="statement not covered">            var lat, lon, hyp;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            coordsArray.forEach(<span class="fstat-no" title="function not covered" >function(coord) {</span></span>
+<span class="cstat-no" title="statement not covered">            coordsArray.forEach(<span class="fstat-no" title="function not covered">function(coord) {</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                lat = this.latitude(coord).toRad();</span>
-<span class="cstat-no" title="statement not covered" >                lon = this.longitude(coord).toRad();</span>
+<span class="cstat-no" title="statement not covered">                lat = this.latitude(coord).toRad();</span>
+<span class="cstat-no" title="statement not covered">                lon = this.longitude(coord).toRad();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                X += Math.cos(lat) * Math.cos(lon);</span>
-<span class="cstat-no" title="statement not covered" >                Y += Math.cos(lat) * Math.sin(lon);</span>
-<span class="cstat-no" title="statement not covered" >                Z += Math.sin(lat);</span>
+<span class="cstat-no" title="statement not covered">                X += Math.cos(lat) * Math.cos(lon);</span>
+<span class="cstat-no" title="statement not covered">                Y += Math.cos(lat) * Math.sin(lon);</span>
+<span class="cstat-no" title="statement not covered">                Z += Math.sin(lat);</span>
 &nbsp;
             }, this);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var nb_coords = coordsArray.length;</span>
-<span class="cstat-no" title="statement not covered" >            X = X / nb_coords;</span>
-<span class="cstat-no" title="statement not covered" >            Y = Y / nb_coords;</span>
-<span class="cstat-no" title="statement not covered" >            Z = Z / nb_coords;</span>
+<span class="cstat-no" title="statement not covered">            var nb_coords = coordsArray.length;</span>
+<span class="cstat-no" title="statement not covered">            X = X / nb_coords;</span>
+<span class="cstat-no" title="statement not covered">            Y = Y / nb_coords;</span>
+<span class="cstat-no" title="statement not covered">            Z = Z / nb_coords;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            lon = Math.atan2(Y, X);</span>
-<span class="cstat-no" title="statement not covered" >            hyp = Math.sqrt(X * X + Y * Y);</span>
-<span class="cstat-no" title="statement not covered" >            lat = Math.atan2(Z, hyp);</span>
+<span class="cstat-no" title="statement not covered">            lon = Math.atan2(Y, X);</span>
+<span class="cstat-no" title="statement not covered">            hyp = Math.sqrt(X * X + Y * Y);</span>
+<span class="cstat-no" title="statement not covered">            lat = Math.atan2(Z, hyp);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return {</span>
+<span class="cstat-no" title="statement not covered">            return {</span>
                 latitude: (lat * Geolib.TO_DEG).toFixed(6),
                 longitude: (lon * Geolib.TO_DEG).toFixed(6)
             };
@@ -3462,41 +3460,41 @@
         *                     maxElev: maxElev,
         *                     minElev: minElev}
         */
-        getBounds: <span class="fstat-no" title="function not covered" >function(coords) {</span>
+        getBounds: <span class="fstat-no" title="function not covered">function(coords) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if (!coords.length) {</span>
-<span class="cstat-no" title="statement not covered" >                return false;</span>
+<span class="cstat-no" title="statement not covered">            if (!coords.length) {</span>
+<span class="cstat-no" title="statement not covered">                return false;</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var useElevation = this.elevation(coords[0]);</span>
+<span class="cstat-no" title="statement not covered">            var useElevation = this.elevation(coords[0]);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var stats = {</span>
+<span class="cstat-no" title="statement not covered">            var stats = {</span>
                 maxLat: -Infinity,
                 minLat: Infinity,
                 maxLng: -Infinity,
                 minLng: Infinity
             };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if (typeof useElevation != 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >                stats.maxElev = 0;</span>
-<span class="cstat-no" title="statement not covered" >                stats.minElev = Infinity;</span>
+<span class="cstat-no" title="statement not covered">            if (typeof useElevation != 'undefined') {</span>
+<span class="cstat-no" title="statement not covered">                stats.maxElev = 0;</span>
+<span class="cstat-no" title="statement not covered">                stats.minElev = Infinity;</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            for (var i = 0, l = coords.length; i &lt; l; ++i) {</span>
+<span class="cstat-no" title="statement not covered">            for (var i = 0, l = coords.length; i &lt; l; ++i) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                stats.maxLat = Math.max(this.latitude(coords[i]), stats.maxLat);</span>
-<span class="cstat-no" title="statement not covered" >                stats.minLat = Math.min(this.latitude(coords[i]), stats.minLat);</span>
-<span class="cstat-no" title="statement not covered" >                stats.maxLng = Math.max(this.longitude(coords[i]), stats.maxLng);</span>
-<span class="cstat-no" title="statement not covered" >                stats.minLng = Math.min(this.longitude(coords[i]), stats.minLng);</span>
+<span class="cstat-no" title="statement not covered">                stats.maxLat = Math.max(this.latitude(coords[i]), stats.maxLat);</span>
+<span class="cstat-no" title="statement not covered">                stats.minLat = Math.min(this.latitude(coords[i]), stats.minLat);</span>
+<span class="cstat-no" title="statement not covered">                stats.maxLng = Math.max(this.longitude(coords[i]), stats.maxLng);</span>
+<span class="cstat-no" title="statement not covered">                stats.minLng = Math.min(this.longitude(coords[i]), stats.minLng);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                if (useElevation) {</span>
-<span class="cstat-no" title="statement not covered" >                    stats.maxElev = Math.max(this.elevation(coords[i]), stats.maxElev);</span>
-<span class="cstat-no" title="statement not covered" >                    stats.minElev = Math.min(this.elevation(coords[i]), stats.minElev);</span>
+<span class="cstat-no" title="statement not covered">                if (useElevation) {</span>
+<span class="cstat-no" title="statement not covered">                    stats.maxElev = Math.max(this.elevation(coords[i]), stats.maxElev);</span>
+<span class="cstat-no" title="statement not covered">                    stats.minElev = Math.min(this.elevation(coords[i]), stats.minElev);</span>
                 }
 &nbsp;
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return stats;</span>
+<span class="cstat-no" title="statement not covered">            return stats;</span>
 &nbsp;
         },
 &nbsp;
@@ -3514,11 +3512,11 @@
         * @param        array       Collection of coords [{latitude: 51.510, longitude: 7.1321}, {latitude: 49.1238, longitude: "8° 30' W"}, ...]
         * @return       object      {latitude: centerLat, longitude: centerLng}
         */
-        getCenterOfBounds: <span class="fstat-no" title="function not covered" >function(coords) {</span>
-<span class="cstat-no" title="statement not covered" >            var b = this.getBounds(coords);</span>
-<span class="cstat-no" title="statement not covered" >            var latitude = b.minLat + ((b.maxLat - b.minLat) / 2);</span>
-<span class="cstat-no" title="statement not covered" >            var longitude = b.minLng + ((b.maxLng - b.minLng) / 2);</span>
-<span class="cstat-no" title="statement not covered" >            return {</span>
+        getCenterOfBounds: <span class="fstat-no" title="function not covered">function(coords) {</span>
+<span class="cstat-no" title="statement not covered">            var b = this.getBounds(coords);</span>
+<span class="cstat-no" title="statement not covered">            var latitude = b.minLat + ((b.maxLat - b.minLat) / 2);</span>
+<span class="cstat-no" title="statement not covered">            var longitude = b.minLng + ((b.maxLng - b.minLng) / 2);</span>
+<span class="cstat-no" title="statement not covered">            return {</span>
                 latitude: parseFloat(latitude.toFixed(6)),
                 longitude: parseFloat(longitude.toFixed(6))
             };
@@ -3534,50 +3532,50 @@
         * @param number Distance (in meters).
         * @return array Collection of two points defining the SW and NE corners.
         */
-        getBoundsOfDistance: <span class="fstat-no" title="function not covered" >function(point, distance) {</span>
+        getBoundsOfDistance: <span class="fstat-no" title="function not covered">function(point, distance) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var latitude = this.latitude(point);</span>
-<span class="cstat-no" title="statement not covered" >            var longitude = this.longitude(point);</span>
+<span class="cstat-no" title="statement not covered">            var latitude = this.latitude(point);</span>
+<span class="cstat-no" title="statement not covered">            var longitude = this.longitude(point);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var radLat = latitude.toRad();</span>
-<span class="cstat-no" title="statement not covered" >            var radLon = longitude.toRad();</span>
+<span class="cstat-no" title="statement not covered">            var radLat = latitude.toRad();</span>
+<span class="cstat-no" title="statement not covered">            var radLon = longitude.toRad();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var radDist = distance / this.radius;</span>
-<span class="cstat-no" title="statement not covered" >            var minLat = radLat - radDist;</span>
-<span class="cstat-no" title="statement not covered" >            var maxLat = radLat + radDist;</span>
+<span class="cstat-no" title="statement not covered">            var radDist = distance / this.radius;</span>
+<span class="cstat-no" title="statement not covered">            var minLat = radLat - radDist;</span>
+<span class="cstat-no" title="statement not covered">            var maxLat = radLat + radDist;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var MAX_LAT_RAD = this.maxLat.toRad();</span>
-<span class="cstat-no" title="statement not covered" >            var MIN_LAT_RAD = this.minLat.toRad();</span>
-<span class="cstat-no" title="statement not covered" >            var MAX_LON_RAD = this.maxLon.toRad();</span>
-<span class="cstat-no" title="statement not covered" >            var MIN_LON_RAD = this.minLon.toRad();</span>
+<span class="cstat-no" title="statement not covered">            var MAX_LAT_RAD = this.maxLat.toRad();</span>
+<span class="cstat-no" title="statement not covered">            var MIN_LAT_RAD = this.minLat.toRad();</span>
+<span class="cstat-no" title="statement not covered">            var MAX_LON_RAD = this.maxLon.toRad();</span>
+<span class="cstat-no" title="statement not covered">            var MIN_LON_RAD = this.minLon.toRad();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var minLon;</span>
-<span class="cstat-no" title="statement not covered" >            var maxLon;</span>
+<span class="cstat-no" title="statement not covered">            var minLon;</span>
+<span class="cstat-no" title="statement not covered">            var maxLon;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if (minLat &gt; MIN_LAT_RAD &amp;&amp; maxLat &lt; MAX_LAT_RAD) {</span>
+<span class="cstat-no" title="statement not covered">            if (minLat &gt; MIN_LAT_RAD &amp;&amp; maxLat &lt; MAX_LAT_RAD) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                var deltaLon = Math.asin(Math.sin(radDist) / Math.cos(radLat));</span>
-<span class="cstat-no" title="statement not covered" >                minLon = radLon - deltaLon;</span>
+<span class="cstat-no" title="statement not covered">                var deltaLon = Math.asin(Math.sin(radDist) / Math.cos(radLat));</span>
+<span class="cstat-no" title="statement not covered">                minLon = radLon - deltaLon;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                if (minLon &lt; MIN_LON_RAD) {</span>
-<span class="cstat-no" title="statement not covered" >                    minLon += Geolib.PI_X2;</span>
+<span class="cstat-no" title="statement not covered">                if (minLon &lt; MIN_LON_RAD) {</span>
+<span class="cstat-no" title="statement not covered">                    minLon += Geolib.PI_X2;</span>
                 }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                maxLon = radLon + deltaLon;</span>
+<span class="cstat-no" title="statement not covered">                maxLon = radLon + deltaLon;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                if (maxLon &gt; MAX_LON_RAD) {</span>
-<span class="cstat-no" title="statement not covered" >                    maxLon -= Geolib.PI_X2;</span>
+<span class="cstat-no" title="statement not covered">                if (maxLon &gt; MAX_LON_RAD) {</span>
+<span class="cstat-no" title="statement not covered">                    maxLon -= Geolib.PI_X2;</span>
                 }
 &nbsp;
             } else {
                 // A pole is within the distance.
-<span class="cstat-no" title="statement not covered" >                minLat = Math.max(minLat, MIN_LAT_RAD);</span>
-<span class="cstat-no" title="statement not covered" >                maxLat = Math.min(maxLat, MAX_LAT_RAD);</span>
-<span class="cstat-no" title="statement not covered" >                minLon = MIN_LON_RAD;</span>
-<span class="cstat-no" title="statement not covered" >                maxLon = MAX_LON_RAD;</span>
+<span class="cstat-no" title="statement not covered">                minLat = Math.max(minLat, MIN_LAT_RAD);</span>
+<span class="cstat-no" title="statement not covered">                maxLat = Math.min(maxLat, MAX_LAT_RAD);</span>
+<span class="cstat-no" title="statement not covered">                minLon = MIN_LON_RAD;</span>
+<span class="cstat-no" title="statement not covered">                maxLon = MAX_LON_RAD;</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return [</span>
+<span class="cstat-no" title="statement not covered">            return [</span>
                 // Southwest
                 {
                     latitude: minLat.toDeg(),
@@ -3601,11 +3599,11 @@
         * @param        array       array with coords e.g. [{latitude: 51.5143, longitude: 7.4138}, {latitude: 123, longitude: 123}, ...]
         * @return       bool        true if the coordinate is inside the given polygon
         */
-        isPointInside: <span class="fstat-no" title="function not covered" >function(latlng, coords) {</span>
+        isPointInside: <span class="fstat-no" title="function not covered">function(latlng, coords) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            for(var c = false, i = -1, l = coords.length, j = l - 1; ++i &lt; l; j = i) {</span>
+<span class="cstat-no" title="statement not covered">            for(var c = false, i = -1, l = coords.length, j = l - 1; ++i &lt; l; j = i) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                if(</span>
+<span class="cstat-no" title="statement not covered">                if(</span>
                     (
                         (this.longitude(coords[i]) &lt;= this.longitude(latlng) &amp;&amp; this.longitude(latlng) &lt; this.longitude(coords[j])) ||
                         (this.longitude(coords[j]) &lt;= this.longitude(latlng) &amp;&amp; this.longitude(latlng) &lt; this.longitude(coords[i]))
@@ -3617,12 +3615,12 @@
                         this.latitude(coords[i])
                     )
                 ) {
-<span class="cstat-no" title="statement not covered" >                    c = !c;</span>
+<span class="cstat-no" title="statement not covered">                    c = !c;</span>
                 }
 &nbsp;
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return c;</span>
+<span class="cstat-no" title="statement not covered">            return c;</span>
 &nbsp;
         },
 &nbsp;
@@ -3633,18 +3631,18 @@
         * @see          Algorythm from http://alienryderflex.com/polygon/
         * @param        array       array with coords e.g. [{latitude: 51.5143, longitude: 7.4138}, {latitude: 123, longitude: 123}, ...]
         */
-        preparePolygonForIsPointInsideOptimized: <span class="fstat-no" title="function not covered" >function(coords) {</span>
+        preparePolygonForIsPointInsideOptimized: <span class="fstat-no" title="function not covered">function(coords) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            for(var i = 0, j = coords.length-1; i &lt; coords.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">            for(var i = 0, j = coords.length-1; i &lt; coords.length; i++) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if(this.longitude(coords[j]) === this.longitude(coords[i])) {</span>
+<span class="cstat-no" title="statement not covered">            if(this.longitude(coords[j]) === this.longitude(coords[i])) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                    coords[i].constant = this.latitude(coords[i]);</span>
-<span class="cstat-no" title="statement not covered" >                    coords[i].multiple = 0;</span>
+<span class="cstat-no" title="statement not covered">                    coords[i].constant = this.latitude(coords[i]);</span>
+<span class="cstat-no" title="statement not covered">                    coords[i].multiple = 0;</span>
 &nbsp;
                 } else {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                    coords[i].constant = this.latitude(coords[i]) - (</span>
+<span class="cstat-no" title="statement not covered">                    coords[i].constant = this.latitude(coords[i]) - (</span>
                         this.longitude(coords[i]) * this.latitude(coords[j])
                     ) / (
                         this.longitude(coords[j]) - this.longitude(coords[i])
@@ -3654,7 +3652,7 @@
                         this.longitude(coords[j])-this.longitude(coords[i])
                     );
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                    coords[i].multiple = (</span>
+<span class="cstat-no" title="statement not covered">                    coords[i].multiple = (</span>
                         this.latitude(coords[j])-this.latitude(coords[i])
                     ) / (
                         this.longitude(coords[j])-this.longitude(coords[i])
@@ -3662,7 +3660,7 @@
 &nbsp;
                 }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                j=i;</span>
+<span class="cstat-no" title="statement not covered">                j=i;</span>
 &nbsp;
             }
 &nbsp;
@@ -3680,26 +3678,26 @@
        * @param     array       array with coords e.g. [{latitude: 51.5143, longitude: 7.4138}, {latitude: 123, longitude: 123}, ...]
        * @return        bool        true if the coordinate is inside the given polygon
        */
-        isPointInsideWithPreparedPolygon: <span class="fstat-no" title="function not covered" >function(point, coords) {</span>
+        isPointInsideWithPreparedPolygon: <span class="fstat-no" title="function not covered">function(point, coords) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var flgPointInside = false,</span>
+<span class="cstat-no" title="statement not covered">            var flgPointInside = false,</span>
             y = this.longitude(point),
             x = this.latitude(point);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            for(var i = 0, j = coords.length-1; i &lt; coords.length; i++) {</span>
+<span class="cstat-no" title="statement not covered">            for(var i = 0, j = coords.length-1; i &lt; coords.length; i++) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                if ((this.longitude(coords[i]) &lt; y &amp;&amp; this.longitude(coords[j]) &gt;=y ||</span>
+<span class="cstat-no" title="statement not covered">                if ((this.longitude(coords[i]) &lt; y &amp;&amp; this.longitude(coords[j]) &gt;=y ||</span>
                     this.longitude(coords[j]) &lt; y &amp;&amp; this.longitude(coords[i]) &gt;= y)) {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                    flgPointInside^=(y*coords[i].multiple+coords[i].constant &lt; x);</span>
+<span class="cstat-no" title="statement not covered">                    flgPointInside^=(y*coords[i].multiple+coords[i].constant &lt; x);</span>
 &nbsp;
                 }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                j=i;</span>
+<span class="cstat-no" title="statement not covered">                j=i;</span>
 &nbsp;
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return flgPointInside;</span>
+<span class="cstat-no" title="statement not covered">            return flgPointInside;</span>
 &nbsp;
         },
 &nbsp;
@@ -3707,8 +3705,8 @@
         /**
         * Shortcut for geolib.isPointInside()
         */
-        isInside: <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >            return this.isPointInside.apply(this, arguments);</span>
+        isInside: <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">            return this.isPointInside.apply(this, arguments);</span>
         },
 &nbsp;
 &nbsp;
@@ -3720,16 +3718,16 @@
         * @param        integer     maximum radius in meters
         * @return       bool        true if the coordinate is within the given radius
         */
-        isPointInCircle: <span class="fstat-no" title="function not covered" >function(latlng, center, radius) {</span>
-<span class="cstat-no" title="statement not covered" >            return this.getDistance(latlng, center) &lt; radius;</span>
+        isPointInCircle: <span class="fstat-no" title="function not covered">function(latlng, center, radius) {</span>
+<span class="cstat-no" title="statement not covered">            return this.getDistance(latlng, center) &lt; radius;</span>
         },
 &nbsp;
 &nbsp;
         /**
         * Shortcut for geolib.isPointInCircle()
         */
-        withinRadius: <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >            return this.isPointInCircle.apply(this, arguments);</span>
+        withinRadius: <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">            return this.isPointInCircle.apply(this, arguments);</span>
         },
 &nbsp;
 &nbsp;
@@ -3746,13 +3744,13 @@
         * @param        object      destination coordinate
         * @return       integer     calculated bearing
         */
-        getRhumbLineBearing: <span class="fstat-no" title="function not covered" >function(originLL, destLL) {</span>
+        getRhumbLineBearing: <span class="fstat-no" title="function not covered">function(originLL, destLL) {</span>
 &nbsp;
             // difference of longitude coords
-<span class="cstat-no" title="statement not covered" >            var diffLon = this.longitude(destLL).toRad() - this.longitude(originLL).toRad();</span>
+<span class="cstat-no" title="statement not covered">            var diffLon = this.longitude(destLL).toRad() - this.longitude(originLL).toRad();</span>
 &nbsp;
             // difference latitude coords phi
-<span class="cstat-no" title="statement not covered" >            var diffPhi = Math.log(</span>
+<span class="cstat-no" title="statement not covered">            var diffPhi = Math.log(</span>
                 Math.tan(
                     this.latitude(destLL).toRad() / 2 + Geolib.PI_DIV4
                 ) /
@@ -3762,17 +3760,17 @@
             );
 &nbsp;
             // recalculate diffLon if it is greater than pi
-<span class="cstat-no" title="statement not covered" >            if(Math.abs(diffLon) &gt; Math.PI) {</span>
-<span class="cstat-no" title="statement not covered" >                if(diffLon &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >                    diffLon = (Geolib.PI_X2 - diffLon) * -1;</span>
+<span class="cstat-no" title="statement not covered">            if(Math.abs(diffLon) &gt; Math.PI) {</span>
+<span class="cstat-no" title="statement not covered">                if(diffLon &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered">                    diffLon = (Geolib.PI_X2 - diffLon) * -1;</span>
                 }
                 else {
-<span class="cstat-no" title="statement not covered" >                    diffLon = Geolib.PI_X2 + diffLon;</span>
+<span class="cstat-no" title="statement not covered">                    diffLon = Geolib.PI_X2 + diffLon;</span>
                 }
             }
 &nbsp;
             //return the angle, normalized
-<span class="cstat-no" title="statement not covered" >            return (Math.atan2(diffLon, diffPhi).toDeg() + 360) % 360;</span>
+<span class="cstat-no" title="statement not covered">            return (Math.atan2(diffLon, diffPhi).toDeg() + 360) % 360;</span>
 &nbsp;
         },
 &nbsp;
@@ -3784,14 +3782,14 @@
         * @param        object      destination coordinate
         * @return       integer     calculated bearing
         */
-        getBearing: <span class="fstat-no" title="function not covered" >function(originLL, destLL) {</span>
+        getBearing: <span class="fstat-no" title="function not covered">function(originLL, destLL) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            destLL['latitude'] = this.latitude(destLL);</span>
-<span class="cstat-no" title="statement not covered" >            destLL['longitude'] = this.longitude(destLL);</span>
-<span class="cstat-no" title="statement not covered" >            originLL['latitude'] = this.latitude(originLL);</span>
-<span class="cstat-no" title="statement not covered" >            originLL['longitude'] = this.longitude(originLL);</span>
+<span class="cstat-no" title="statement not covered">            destLL['latitude'] = this.latitude(destLL);</span>
+<span class="cstat-no" title="statement not covered">            destLL['longitude'] = this.longitude(destLL);</span>
+<span class="cstat-no" title="statement not covered">            originLL['latitude'] = this.latitude(originLL);</span>
+<span class="cstat-no" title="statement not covered">            originLL['longitude'] = this.longitude(originLL);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var bearing = (</span>
+<span class="cstat-no" title="statement not covered">            var bearing = (</span>
                 (
                     Math.atan2(
                         Math.sin(
@@ -3820,7 +3818,7 @@
                 ).toDeg() + 360
             ) % 360;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return bearing;</span>
+<span class="cstat-no" title="statement not covered">            return bearing;</span>
 &nbsp;
         },
 &nbsp;
@@ -3833,71 +3831,71 @@
         * @param        string      Bearing mode. Can be either circle or rhumbline
         * @return       object      Returns an object with a rough (NESW) and an exact direction (NNE, NE, ENE, E, ESE, etc).
         */
-        getCompassDirection: <span class="fstat-no" title="function not covered" >function(originLL, destLL, bearingMode) {</span>
+        getCompassDirection: <span class="fstat-no" title="function not covered">function(originLL, destLL, bearingMode) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var direction;</span>
-<span class="cstat-no" title="statement not covered" >            var bearing;</span>
+<span class="cstat-no" title="statement not covered">            var direction;</span>
+<span class="cstat-no" title="statement not covered">            var bearing;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if(bearingMode == 'circle') {</span>
+<span class="cstat-no" title="statement not covered">            if(bearingMode == 'circle') {</span>
                 // use great circle bearing
-<span class="cstat-no" title="statement not covered" >                bearing = this.getBearing(originLL, destLL);</span>
+<span class="cstat-no" title="statement not covered">                bearing = this.getBearing(originLL, destLL);</span>
             } else {
                 // default is rhumb line bearing
-<span class="cstat-no" title="statement not covered" >                bearing = this.getRhumbLineBearing(originLL, destLL);</span>
+<span class="cstat-no" title="statement not covered">                bearing = this.getRhumbLineBearing(originLL, destLL);</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            switch(Math.round(bearing/22.5)) {</span>
+<span class="cstat-no" title="statement not covered">            switch(Math.round(bearing/22.5)) {</span>
                 case 1:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "NNE", rough: "N"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "NNE", rough: "N"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 case 2:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "NE", rough: "N"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "NE", rough: "N"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 case 3:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "ENE", rough: "E"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "ENE", rough: "E"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 case 4:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "E", rough: "E"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "E", rough: "E"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 case 5:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "ESE", rough: "E"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "ESE", rough: "E"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 case 6:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "SE", rough: "E"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "SE", rough: "E"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 case 7:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "SSE", rough: "S"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "SSE", rough: "S"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 case 8:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "S", rough: "S"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "S", rough: "S"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 case 9:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "SSW", rough: "S"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "SSW", rough: "S"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 case 10:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "SW", rough: "S"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "SW", rough: "S"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 case 11:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "WSW", rough: "W"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "WSW", rough: "W"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 case 12:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "W", rough: "W"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "W", rough: "W"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 case 13:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "WNW", rough: "W"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "WNW", rough: "W"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 case 14:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "NW", rough: "W"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "NW", rough: "W"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 case 15:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "NNW", rough: "N"};</span>
-<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "NNW", rough: "N"};</span>
+<span class="cstat-no" title="statement not covered">                    break;</span>
                 default:
-<span class="cstat-no" title="statement not covered" >                    direction = {exact: "N", rough: "N"};</span>
+<span class="cstat-no" title="statement not covered">                    direction = {exact: "N", rough: "N"};</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            direction['bearing'] = bearing;</span>
-<span class="cstat-no" title="statement not covered" >            return direction;</span>
+<span class="cstat-no" title="statement not covered">            direction['bearing'] = bearing;</span>
+<span class="cstat-no" title="statement not covered">            return direction;</span>
 &nbsp;
         },
 &nbsp;
@@ -3905,8 +3903,8 @@
         /**
         * Shortcut for getCompassDirection
         */
-        getDirection: <span class="fstat-no" title="function not covered" >function(originLL, destLL, bearingMode) {</span>
-<span class="cstat-no" title="statement not covered" >            return this.getCompassDirection.apply(this, arguments);</span>
+        getDirection: <span class="fstat-no" title="function not covered">function(originLL, destLL, bearingMode) {</span>
+<span class="cstat-no" title="statement not covered">            return this.getCompassDirection.apply(this, arguments);</span>
         },
 &nbsp;
 &nbsp;
@@ -3917,23 +3915,23 @@
         * @param        mixed       array or object with coords [{latitude: 51.5143, longitude: 7.4138}, {latitude: 123, longitude: 123}, ...]
         * @return       array       ordered array
         */
-        orderByDistance: <span class="fstat-no" title="function not covered" >function(latlng, coords) {</span>
+        orderByDistance: <span class="fstat-no" title="function not covered">function(latlng, coords) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var coordsArray = [];</span>
+<span class="cstat-no" title="statement not covered">            var coordsArray = [];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            for(var coord in coords) {</span>
+<span class="cstat-no" title="statement not covered">            for(var coord in coords) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                var distance = this.getDistance(latlng, coords[coord]);</span>
-<span class="cstat-no" title="statement not covered" >                var augmentedCoord = Object.create(coords[coord]);</span>
-<span class="cstat-no" title="statement not covered" >                augmentedCoord.distance = distance;</span>
-<span class="cstat-no" title="statement not covered" >                augmentedCoord.key = coord;</span>
+<span class="cstat-no" title="statement not covered">                var distance = this.getDistance(latlng, coords[coord]);</span>
+<span class="cstat-no" title="statement not covered">                var augmentedCoord = Object.create(coords[coord]);</span>
+<span class="cstat-no" title="statement not covered">                augmentedCoord.distance = distance;</span>
+<span class="cstat-no" title="statement not covered">                augmentedCoord.key = coord;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                coordsArray.push(augmentedCoord);</span>
+<span class="cstat-no" title="statement not covered">                coordsArray.push(augmentedCoord);</span>
 &nbsp;
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return coordsArray.sort(<span class="fstat-no" title="function not covered" >function(a, b) {</span></span>
-<span class="cstat-no" title="statement not covered" >                return a.distance - b.distance;</span>
+<span class="cstat-no" title="statement not covered">            return coordsArray.sort(<span class="fstat-no" title="function not covered">function(a, b) {</span></span>
+<span class="cstat-no" title="statement not covered">                return a.distance - b.distance;</span>
             });
 &nbsp;
         },
@@ -3946,9 +3944,9 @@
         * @param    object    End of line {latitude: 123, longitude: 123}
         * @return   boolean
         */
-        isPointInLine: <span class="fstat-no" title="function not covered" >function(point, start, end) {</span>
+        isPointInLine: <span class="fstat-no" title="function not covered">function(point, start, end) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return (this.getDistance(start, point, 1, 3)+this.getDistance(point, end, 1, 3)).toFixed(3)==this.getDistance(start, end, 1, 3);</span>
+<span class="cstat-no" title="statement not covered">            return (this.getDistance(start, point, 1, 3)+this.getDistance(point, end, 1, 3)).toFixed(3)==this.getDistance(start, end, 1, 3);</span>
         },
 &nbsp;
                 /**
@@ -3960,8 +3958,8 @@
         * @pararm   float     maximum distance from line
         * @return   boolean
         */
-        isPointNearLine: <span class="fstat-no" title="function not covered" >function(point, start, end, distance) {</span>
-<span class="cstat-no" title="statement not covered" >            return this.getDistanceFromLine(point, start, end) &lt; distance;</span>
+        isPointNearLine: <span class="fstat-no" title="function not covered">function(point, start, end, distance) {</span>
+<span class="cstat-no" title="statement not covered">            return this.getDistanceFromLine(point, start, end) &lt; distance;</span>
         },
 &nbsp;
                      /**
@@ -3972,33 +3970,33 @@
         * @param    object    End of line {latitude: 123, longitude: 123}
         * @return   float     distance from point to line
         */
-        getDistanceFromLine: <span class="fstat-no" title="function not covered" >function(point, start, end) {</span>
-<span class="cstat-no" title="statement not covered" >            var d1 = this.getDistance(start, point, 1, 3);</span>
-<span class="cstat-no" title="statement not covered" >            var d2 = this.getDistance(point, end, 1, 3);</span>
-<span class="cstat-no" title="statement not covered" >            var d3 = this.getDistance(start, end, 1, 3);</span>
-<span class="cstat-no" title="statement not covered" >            var distance = 0;</span>
+        getDistanceFromLine: <span class="fstat-no" title="function not covered">function(point, start, end) {</span>
+<span class="cstat-no" title="statement not covered">            var d1 = this.getDistance(start, point, 1, 3);</span>
+<span class="cstat-no" title="statement not covered">            var d2 = this.getDistance(point, end, 1, 3);</span>
+<span class="cstat-no" title="statement not covered">            var d3 = this.getDistance(start, end, 1, 3);</span>
+<span class="cstat-no" title="statement not covered">            var distance = 0;</span>
 &nbsp;
             // alpha is the angle between the line from start to point, and from start to end //
-<span class="cstat-no" title="statement not covered" >            var alpha = Math.acos((d1*d1 + d3*d3 - d2*d2)/(2*d1*d3));</span>
+<span class="cstat-no" title="statement not covered">            var alpha = Math.acos((d1*d1 + d3*d3 - d2*d2)/(2*d1*d3));</span>
             // beta is the angle between the line from end to point and from end to start //
-<span class="cstat-no" title="statement not covered" >            var beta = Math.acos((d2*d2 + d3*d3 - d1*d1)/(2*d2*d3));</span>
+<span class="cstat-no" title="statement not covered">            var beta = Math.acos((d2*d2 + d3*d3 - d1*d1)/(2*d2*d3));</span>
 &nbsp;
             // if the angle is greater than 90 degrees, then the minimum distance is the
             // line from the start to the point //
-<span class="cstat-no" title="statement not covered" >            if(alpha&gt;Math.PI/2) {</span>
-<span class="cstat-no" title="statement not covered" >                distance = d1;</span>
+<span class="cstat-no" title="statement not covered">            if(alpha&gt;Math.PI/2) {</span>
+<span class="cstat-no" title="statement not covered">                distance = d1;</span>
             }
             // same for the beta //
-            else <span class="cstat-no" title="statement not covered" >if(beta &gt; Math.PI/2) {</span>
-<span class="cstat-no" title="statement not covered" >                distance = d2;</span>
+            else <span class="cstat-no" title="statement not covered">if(beta &gt; Math.PI/2) {</span>
+<span class="cstat-no" title="statement not covered">                distance = d2;</span>
             }
             // otherwise the minimum distance is achieved through a line perpendular to the start-end line,
             // which goes from the start-end line to the point //
             else {
-<span class="cstat-no" title="statement not covered" >                distance = Math.sin(alpha) * d1;</span>
+<span class="cstat-no" title="statement not covered">                distance = Math.sin(alpha) * d1;</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return distance;</span>
+<span class="cstat-no" title="statement not covered">            return distance;</span>
         },
 &nbsp;
         /**
@@ -4008,16 +4006,16 @@
         * @param        mixed       array or object with coords [{latitude: 51.5143, longitude: 7.4138}, {latitude: 123, longitude: 123}, ...]
         * @return       array       ordered array
         */
-        findNearest: <span class="fstat-no" title="function not covered" >function(latlng, coords, offset, limit) {</span>
+        findNearest: <span class="fstat-no" title="function not covered">function(latlng, coords, offset, limit) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            offset = offset || 0;</span>
-<span class="cstat-no" title="statement not covered" >            limit = limit || 1;</span>
-<span class="cstat-no" title="statement not covered" >            var ordered = this.orderByDistance(latlng, coords);</span>
+<span class="cstat-no" title="statement not covered">            offset = offset || 0;</span>
+<span class="cstat-no" title="statement not covered">            limit = limit || 1;</span>
+<span class="cstat-no" title="statement not covered">            var ordered = this.orderByDistance(latlng, coords);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if(limit === 1) {</span>
-<span class="cstat-no" title="statement not covered" >                return ordered[offset];</span>
+<span class="cstat-no" title="statement not covered">            if(limit === 1) {</span>
+<span class="cstat-no" title="statement not covered">                return ordered[offset];</span>
             } else {
-<span class="cstat-no" title="statement not covered" >                return ordered.splice(offset, limit);</span>
+<span class="cstat-no" title="statement not covered">                return ordered.splice(offset, limit);</span>
             }
 &nbsp;
         },
@@ -4029,20 +4027,20 @@
         * @param        mixed       array or object with coords [{latitude: 51.5143, longitude: 7.4138}, {latitude: 123, longitude: 123}, ...]
         * @return       integer     length of the path (in meters)
         */
-        getPathLength: <span class="fstat-no" title="function not covered" >function(coords) {</span>
+        getPathLength: <span class="fstat-no" title="function not covered">function(coords) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var dist = 0;</span>
-<span class="cstat-no" title="statement not covered" >            var last;</span>
+<span class="cstat-no" title="statement not covered">            var dist = 0;</span>
+<span class="cstat-no" title="statement not covered">            var last;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            for (var i = 0, l = coords.length; i &lt; l; ++i) {</span>
-<span class="cstat-no" title="statement not covered" >                if(last) {</span>
+<span class="cstat-no" title="statement not covered">            for (var i = 0, l = coords.length; i &lt; l; ++i) {</span>
+<span class="cstat-no" title="statement not covered">                if(last) {</span>
                     //console.log(coords[i], last, this.getDistance(coords[i], last));
-<span class="cstat-no" title="statement not covered" >                    dist += this.getDistance(this.coords(coords[i]), last);</span>
+<span class="cstat-no" title="statement not covered">                    dist += this.getDistance(this.coords(coords[i]), last);</span>
                 }
-<span class="cstat-no" title="statement not covered" >                last = this.coords(coords[i]);</span>
+<span class="cstat-no" title="statement not covered">                last = this.coords(coords[i]);</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return dist;</span>
+<span class="cstat-no" title="statement not covered">            return dist;</span>
 &nbsp;
         },
 &nbsp;
@@ -4055,21 +4053,21 @@
         * @param        object      options (currently "unit" is the only option. Default: km(h));
         * @return       float       speed in unit per hour
         */
-        getSpeed: <span class="fstat-no" title="function not covered" >function(start, end, options) {</span>
+        getSpeed: <span class="fstat-no" title="function not covered">function(start, end, options) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var unit = options &amp;&amp; options.unit || 'km';</span>
+<span class="cstat-no" title="statement not covered">            var unit = options &amp;&amp; options.unit || 'km';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if(unit == 'mph') {</span>
-<span class="cstat-no" title="statement not covered" >                unit = 'mi';</span>
-            } else <span class="cstat-no" title="statement not covered" >if(unit == 'kmh') {</span>
-<span class="cstat-no" title="statement not covered" >                unit = 'km';</span>
+<span class="cstat-no" title="statement not covered">            if(unit == 'mph') {</span>
+<span class="cstat-no" title="statement not covered">                unit = 'mi';</span>
+            } else <span class="cstat-no" title="statement not covered">if(unit == 'kmh') {</span>
+<span class="cstat-no" title="statement not covered">                unit = 'km';</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var distance = geolib.getDistance(start, end);</span>
-<span class="cstat-no" title="statement not covered" >            var time = ((end.time*1)/1000) - ((start.time*1)/1000);</span>
-<span class="cstat-no" title="statement not covered" >            var mPerHr = (distance/time)*3600;</span>
-<span class="cstat-no" title="statement not covered" >            var speed = Math.round(mPerHr * this.measures[unit] * 10000)/10000;</span>
-<span class="cstat-no" title="statement not covered" >            return speed;</span>
+<span class="cstat-no" title="statement not covered">            var distance = geolib.getDistance(start, end);</span>
+<span class="cstat-no" title="statement not covered">            var time = ((end.time*1)/1000) - ((start.time*1)/1000);</span>
+<span class="cstat-no" title="statement not covered">            var mPerHr = (distance/time)*3600;</span>
+<span class="cstat-no" title="statement not covered">            var speed = Math.round(mPerHr * this.measures[unit] * 10000)/10000;</span>
+<span class="cstat-no" title="statement not covered">            return speed;</span>
 &nbsp;
         },
 &nbsp;
@@ -4087,26 +4085,26 @@
          * @param        float      optional (in meter), defaults to mean radius of the earth
          * @return       object     {latitude: destLat (in degree), longitude: destLng (in degree)}
          */
-        computeDestinationPoint: <span class="fstat-no" title="function not covered" >function(start, distance, bearing, radius) {</span>
+        computeDestinationPoint: <span class="fstat-no" title="function not covered">function(start, distance, bearing, radius) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var lat = this.latitude(start);</span>
-<span class="cstat-no" title="statement not covered" >            var lng = this.longitude(start);</span>
+<span class="cstat-no" title="statement not covered">            var lat = this.latitude(start);</span>
+<span class="cstat-no" title="statement not covered">            var lng = this.longitude(start);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            radius = (typeof radius === 'undefined') ? this.radius : Number(radius);</span>
+<span class="cstat-no" title="statement not covered">            radius = (typeof radius === 'undefined') ? this.radius : Number(radius);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var δ = Number(distance) / radius; </span>// angular distance in radians
-<span class="cstat-no" title="statement not covered" >            var θ = Number(bearing).toRad();</span>
+<span class="cstat-no" title="statement not covered">            var δ = Number(distance) / radius; </span>// angular distance in radians
+<span class="cstat-no" title="statement not covered">            var θ = Number(bearing).toRad();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var φ1 = Number(lat).toRad();</span>
-<span class="cstat-no" title="statement not covered" >            var λ1 = Number(lng).toRad();</span>
+<span class="cstat-no" title="statement not covered">            var φ1 = Number(lat).toRad();</span>
+<span class="cstat-no" title="statement not covered">            var λ1 = Number(lng).toRad();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var φ2 = Math.asin( Math.sin(φ1)*Math.cos(δ) +</span>
+<span class="cstat-no" title="statement not covered">            var φ2 = Math.asin( Math.sin(φ1)*Math.cos(δ) +</span>
                 Math.cos(φ1)*Math.sin(δ)*Math.cos(θ) );
-<span class="cstat-no" title="statement not covered" >            var λ2 = λ1 + Math.atan2(Math.sin(θ)*Math.sin(δ)*Math.cos(φ1),</span>
+<span class="cstat-no" title="statement not covered">            var λ2 = λ1 + Math.atan2(Math.sin(θ)*Math.sin(δ)*Math.cos(φ1),</span>
                     Math.cos(δ)-Math.sin(φ1)*Math.sin(φ2));
-<span class="cstat-no" title="statement not covered" >            λ2 = (λ2+3*Math.PI) % (2*Math.PI) - Math.PI; </span>// normalise to -180..+180°
+<span class="cstat-no" title="statement not covered">            λ2 = (λ2+3*Math.PI) % (2*Math.PI) - Math.PI; </span>// normalise to -180..+180°
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return {</span>
+<span class="cstat-no" title="statement not covered">            return {</span>
                 latitude: φ2.toDeg(),
                 longitude: λ2.toDeg()
             };
@@ -4122,31 +4120,31 @@
         * @param        float       Decimal places for rounding (default: 4)
         * @return       float       Converted distance
         */
-        convertUnit: <span class="fstat-no" title="function not covered" >function(unit, distance, round) {</span>
+        convertUnit: <span class="fstat-no" title="function not covered">function(unit, distance, round) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if(distance === 0) {</span>
+<span class="cstat-no" title="statement not covered">            if(distance === 0) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                return 0;</span>
+<span class="cstat-no" title="statement not covered">                return 0;</span>
 &nbsp;
-            } else <span class="cstat-no" title="statement not covered" >if(typeof distance === 'undefined') {</span>
+            } else <span class="cstat-no" title="statement not covered">if(typeof distance === 'undefined') {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                if(this.distance === null) {</span>
-<span class="cstat-no" title="statement not covered" >                    throw new Error('No distance was given');</span>
-                } else <span class="cstat-no" title="statement not covered" >if(this.distance === 0) {</span>
-<span class="cstat-no" title="statement not covered" >                    return 0;</span>
+<span class="cstat-no" title="statement not covered">                if(this.distance === null) {</span>
+<span class="cstat-no" title="statement not covered">                    throw new Error('No distance was given');</span>
+                } else <span class="cstat-no" title="statement not covered">if(this.distance === 0) {</span>
+<span class="cstat-no" title="statement not covered">                    return 0;</span>
                 } else {
-<span class="cstat-no" title="statement not covered" >                    distance = this.distance;</span>
+<span class="cstat-no" title="statement not covered">                    distance = this.distance;</span>
                 }
 &nbsp;
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            unit = unit || 'm';</span>
-<span class="cstat-no" title="statement not covered" >            round = (null == round ? 4 : round);</span>
+<span class="cstat-no" title="statement not covered">            unit = unit || 'm';</span>
+<span class="cstat-no" title="statement not covered">            round = (null == round ? 4 : round);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if(typeof this.measures[unit] !== 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >                return this.round(distance * this.measures[unit], round);</span>
+<span class="cstat-no" title="statement not covered">            if(typeof this.measures[unit] !== 'undefined') {</span>
+<span class="cstat-no" title="statement not covered">                return this.round(distance * this.measures[unit], round);</span>
             } else {
-<span class="cstat-no" title="statement not covered" >                throw new Error('Unknown unit for conversion.');</span>
+<span class="cstat-no" title="statement not covered">                throw new Error('Unknown unit for conversion.');</span>
             }
 &nbsp;
         },
@@ -4158,75 +4156,75 @@
         * @param        mixed       Value(s) to be checked/converted (array of latlng objects, latlng object, sexagesimal string, float)
         * @return       float       Input data in decimal format
         */
-        useDecimal: <span class="fstat-no" title="function not covered" >function(value) {</span>
+        useDecimal: <span class="fstat-no" title="function not covered">function(value) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if(Object.prototype.toString.call(value) === '[object Array]') {</span>
+<span class="cstat-no" title="statement not covered">            if(Object.prototype.toString.call(value) === '[object Array]') {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                var geolib = this;</span>
+<span class="cstat-no" title="statement not covered">                var geolib = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                value = value.map(<span class="fstat-no" title="function not covered" >function(val) {</span></span>
+<span class="cstat-no" title="statement not covered">                value = value.map(<span class="fstat-no" title="function not covered">function(val) {</span></span>
 &nbsp;
                     //if(!isNaN(parseFloat(val))) {
-<span class="cstat-no" title="statement not covered" >                    if(geolib.isDecimal(val)) {</span>
+<span class="cstat-no" title="statement not covered">                    if(geolib.isDecimal(val)) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                        return geolib.useDecimal(val);</span>
+<span class="cstat-no" title="statement not covered">                        return geolib.useDecimal(val);</span>
 &nbsp;
-                    } else <span class="cstat-no" title="statement not covered" >if(typeof val == 'object') {</span>
+                    } else <span class="cstat-no" title="statement not covered">if(typeof val == 'object') {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                        if(geolib.validate(val)) {</span>
+<span class="cstat-no" title="statement not covered">                        if(geolib.validate(val)) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                            return geolib.coords(val);</span>
+<span class="cstat-no" title="statement not covered">                            return geolib.coords(val);</span>
 &nbsp;
                         } else {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                            for(var prop in val) {</span>
-<span class="cstat-no" title="statement not covered" >                                val[prop] = geolib.useDecimal(val[prop]);</span>
+<span class="cstat-no" title="statement not covered">                            for(var prop in val) {</span>
+<span class="cstat-no" title="statement not covered">                                val[prop] = geolib.useDecimal(val[prop]);</span>
                             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                            return val;</span>
+<span class="cstat-no" title="statement not covered">                            return val;</span>
 &nbsp;
                         }
 &nbsp;
-                    } else <span class="cstat-no" title="statement not covered" >if(geolib.isSexagesimal(val)) {</span>
+                    } else <span class="cstat-no" title="statement not covered">if(geolib.isSexagesimal(val)) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                        return geolib.sexagesimal2decimal(val);</span>
+<span class="cstat-no" title="statement not covered">                        return geolib.sexagesimal2decimal(val);</span>
 &nbsp;
                     } else {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                        return val;</span>
+<span class="cstat-no" title="statement not covered">                        return val;</span>
 &nbsp;
                     }
 &nbsp;
                 });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                return value;</span>
+<span class="cstat-no" title="statement not covered">                return value;</span>
 &nbsp;
-            } else <span class="cstat-no" title="statement not covered" >if(typeof value === 'object' &amp;&amp; this.validate(value)) {</span>
+            } else <span class="cstat-no" title="statement not covered">if(typeof value === 'object' &amp;&amp; this.validate(value)) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                return this.coords(value);</span>
+<span class="cstat-no" title="statement not covered">                return this.coords(value);</span>
 &nbsp;
-            } else <span class="cstat-no" title="statement not covered" >if(typeof value === 'object') {</span>
+            } else <span class="cstat-no" title="statement not covered">if(typeof value === 'object') {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                for(var prop in value) {</span>
-<span class="cstat-no" title="statement not covered" >                    value[prop] = this.useDecimal(value[prop]);</span>
+<span class="cstat-no" title="statement not covered">                for(var prop in value) {</span>
+<span class="cstat-no" title="statement not covered">                    value[prop] = this.useDecimal(value[prop]);</span>
                 }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                return value;</span>
+<span class="cstat-no" title="statement not covered">                return value;</span>
 &nbsp;
             }
 &nbsp;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if (this.isDecimal(value)) {</span>
+<span class="cstat-no" title="statement not covered">            if (this.isDecimal(value)) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                return parseFloat(value);</span>
+<span class="cstat-no" title="statement not covered">                return parseFloat(value);</span>
 &nbsp;
-            } else <span class="cstat-no" title="statement not covered" >if(this.isSexagesimal(value) === true) {</span>
+            } else <span class="cstat-no" title="statement not covered">if(this.isSexagesimal(value) === true) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                return parseFloat(this.sexagesimal2decimal(value));</span>
+<span class="cstat-no" title="statement not covered">                return parseFloat(this.sexagesimal2decimal(value));</span>
 &nbsp;
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            throw new Error('Unknown format.');</span>
+<span class="cstat-no" title="statement not covered">            throw new Error('Unknown format.');</span>
 &nbsp;
         },
 &nbsp;
@@ -4236,24 +4234,24 @@
         * @param        float       decimal
         * @return       string      Sexagesimal value (XX° YY' ZZ")
         */
-        decimal2sexagesimal: <span class="fstat-no" title="function not covered" >function(dec) {</span>
+        decimal2sexagesimal: <span class="fstat-no" title="function not covered">function(dec) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if (dec in this.sexagesimal) {</span>
-<span class="cstat-no" title="statement not covered" >                return this.sexagesimal[dec];</span>
+<span class="cstat-no" title="statement not covered">            if (dec in this.sexagesimal) {</span>
+<span class="cstat-no" title="statement not covered">                return this.sexagesimal[dec];</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var tmp = dec.toString().split('.');</span>
+<span class="cstat-no" title="statement not covered">            var tmp = dec.toString().split('.');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var deg = Math.abs(tmp[0]);</span>
-<span class="cstat-no" title="statement not covered" >            var min = ('0.' + (tmp[1] || 0))*60;</span>
-<span class="cstat-no" title="statement not covered" >            var sec = min.toString().split('.');</span>
+<span class="cstat-no" title="statement not covered">            var deg = Math.abs(tmp[0]);</span>
+<span class="cstat-no" title="statement not covered">            var min = ('0.' + (tmp[1] || 0))*60;</span>
+<span class="cstat-no" title="statement not covered">            var sec = min.toString().split('.');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            min = Math.floor(min);</span>
-<span class="cstat-no" title="statement not covered" >            sec = (('0.' + (sec[1] || 0)) * 60).toFixed(2);</span>
+<span class="cstat-no" title="statement not covered">            min = Math.floor(min);</span>
+<span class="cstat-no" title="statement not covered">            sec = (('0.' + (sec[1] || 0)) * 60).toFixed(2);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            this.sexagesimal[dec] = (deg + '° ' + min + "' " + sec + '"');</span>
+<span class="cstat-no" title="statement not covered">            this.sexagesimal[dec] = (deg + '° ' + min + "' " + sec + '"');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return this.sexagesimal[dec];</span>
+<span class="cstat-no" title="statement not covered">            return this.sexagesimal[dec];</span>
 &nbsp;
         },
 &nbsp;
@@ -4264,31 +4262,31 @@
         * @param        float       Sexagesimal coordinate
         * @return       string      Decimal value (XX.XXXXXXXX)
         */
-        sexagesimal2decimal: <span class="fstat-no" title="function not covered" >function(sexagesimal) {</span>
+        sexagesimal2decimal: <span class="fstat-no" title="function not covered">function(sexagesimal) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if (sexagesimal in this.decimal) {</span>
-<span class="cstat-no" title="statement not covered" >                return this.decimal[sexagesimal];</span>
+<span class="cstat-no" title="statement not covered">            if (sexagesimal in this.decimal) {</span>
+<span class="cstat-no" title="statement not covered">                return this.decimal[sexagesimal];</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var regEx = new RegExp(this.sexagesimalPattern);</span>
-<span class="cstat-no" title="statement not covered" >            var data = regEx.exec(sexagesimal);</span>
-<span class="cstat-no" title="statement not covered" >            var min = 0, sec = 0;</span>
+<span class="cstat-no" title="statement not covered">            var regEx = new RegExp(this.sexagesimalPattern);</span>
+<span class="cstat-no" title="statement not covered">            var data = regEx.exec(sexagesimal);</span>
+<span class="cstat-no" title="statement not covered">            var min = 0, sec = 0;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            if(data) {</span>
-<span class="cstat-no" title="statement not covered" >                min = parseFloat(data[2]/60);</span>
-<span class="cstat-no" title="statement not covered" >                sec = parseFloat(data[4]/3600) || 0;</span>
+<span class="cstat-no" title="statement not covered">            if(data) {</span>
+<span class="cstat-no" title="statement not covered">                min = parseFloat(data[2]/60);</span>
+<span class="cstat-no" title="statement not covered">                sec = parseFloat(data[4]/3600) || 0;</span>
             }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            var dec = ((parseFloat(data[1]) + min + sec)).toFixed(8);</span>
+<span class="cstat-no" title="statement not covered">            var dec = ((parseFloat(data[1]) + min + sec)).toFixed(8);</span>
             //var   dec = ((parseFloat(data[1]) + min + sec));
 &nbsp;
                 // South and West are negative decimals
-<span class="cstat-no" title="statement not covered" >                dec = (data[7] == 'S' || data[7] == 'W') ? parseFloat(-dec) : parseFloat(dec);</span>
+<span class="cstat-no" title="statement not covered">                dec = (data[7] == 'S' || data[7] == 'W') ? parseFloat(-dec) : parseFloat(dec);</span>
                 //dec = (data[7] == 'S' || data[7] == 'W') ? -dec : dec;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            this.decimal[sexagesimal] = dec;</span>
+<span class="cstat-no" title="statement not covered">            this.decimal[sexagesimal] = dec;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return dec;</span>
+<span class="cstat-no" title="statement not covered">            return dec;</span>
 &nbsp;
         },
 &nbsp;
@@ -4299,13 +4297,13 @@
         * @param        string      Value to be checked
         * @return       bool        True if in sexagesimal format
         */
-        isDecimal: <span class="fstat-no" title="function not covered" >function(value) {</span>
+        isDecimal: <span class="fstat-no" title="function not covered">function(value) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            value = value.toString().replace(/\s*/, '');</span>
+<span class="cstat-no" title="statement not covered">            value = value.toString().replace(/\s*/, '');</span>
 &nbsp;
             // looks silly but works as expected
             // checks if value is in decimal format
-<span class="cstat-no" title="statement not covered" >            return (!isNaN(parseFloat(value)) &amp;&amp; parseFloat(value) == value);</span>
+<span class="cstat-no" title="statement not covered">            return (!isNaN(parseFloat(value)) &amp;&amp; parseFloat(value) == value);</span>
 &nbsp;
         },
 &nbsp;
@@ -4316,52 +4314,53 @@
         * @param        string      Value to be checked
         * @return       bool        True if in sexagesimal format
         */
-        isSexagesimal: <span class="fstat-no" title="function not covered" >function(value) {</span>
+        isSexagesimal: <span class="fstat-no" title="function not covered">function(value) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            value = value.toString().replace(/\s*/, '');</span>
+<span class="cstat-no" title="statement not covered">            value = value.toString().replace(/\s*/, '');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >            return this.sexagesimalPattern.test(value);</span>
+<span class="cstat-no" title="statement not covered">            return this.sexagesimalPattern.test(value);</span>
 &nbsp;
         },
 &nbsp;
-        round: <span class="fstat-no" title="function not covered" >function(value, n) {</span>
-<span class="cstat-no" title="statement not covered" >            var decPlace = Math.pow(10, n);</span>
-<span class="cstat-no" title="statement not covered" >            return Math.round(value * decPlace)/decPlace;</span>
+        round: <span class="fstat-no" title="function not covered">function(value, n) {</span>
+<span class="cstat-no" title="statement not covered">            var decPlace = Math.pow(10, n);</span>
+<span class="cstat-no" title="statement not covered">            return Math.round(value * decPlace)/decPlace;</span>
         }
 &nbsp;
     });
 &nbsp;
     // Node module
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof module !== 'undefined' &amp;&amp; typeof module.exports !== 'undefined') {
+    <span class="missing-if-branch" title="else path not taken">E</span>if (typeof module !== 'undefined' &amp;&amp; typeof module.exports !== 'undefined') {
 &nbsp;
         module.exports = geolib;
 &nbsp;
         // react native
-        <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof global === 'object') {
+        <span class="missing-if-branch" title="else path not taken">E</span>if (typeof global === 'object') {
           global.geolib = geolib;
         }
 &nbsp;
     // AMD module
-    } else <span class="cstat-no" title="statement not covered" >if (typeof define === "function" &amp;&amp; define.amd) {</span>
+    } else <span class="cstat-no" title="statement not covered">if (typeof define === "function" &amp;&amp; define.amd) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        define("geolib", [], <span class="fstat-no" title="function not covered" >function () {</span></span>
-<span class="cstat-no" title="statement not covered" >            return geolib;</span>
+<span class="cstat-no" title="statement not covered">        define("geolib", [], <span class="fstat-no" title="function not covered">function () {</span></span>
+<span class="cstat-no" title="statement not covered">            return geolib;</span>
         });
 &nbsp;
     // we're in a browser
     } else {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        global.geolib = geolib;</span>
+<span class="cstat-no" title="statement not covered">        global.geolib = geolib;</span>
 &nbsp;
     }
 &nbsp;
 }(this));
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 14:27:14 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 22:47:28 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
