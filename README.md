@@ -1,4 +1,7 @@
-# test coverage for  [geolib (v2.0.22)](http://github.com/manuelbieh/Geolib)  [![npm package](https://img.shields.io/npm/v/npmtest-geolib.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-geolib) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-geolib.svg)](https://travis-ci.org/npmtest/node-npmtest-geolib)
+# npmtest-geolib
+
+#### basic test coverage for  [geolib (v2.0.22)](http://github.com/manuelbieh/Geolib)  [![npm package](https://img.shields.io/npm/v/npmtest-geolib.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-geolib) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-geolib.svg)](https://travis-ci.org/npmtest/node-npmtest-geolib)
+
 #### Library to perform geo specific tasks
 
 [![NPM](https://nodei.co/npm/geolib.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/geolib)
@@ -7,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-geolib/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-geolib/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-geolib/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-geolib/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-geolib/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-geolib/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-geolib/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-geolib/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-geolib/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-geolib/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-geolib/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-geolib/build/coverage.html/index.html)
 
@@ -97,7 +100,8 @@
     "scripts": {
         "test": "grunt travis --verbose"
     },
-    "version": "2.0.22"
+    "version": "2.0.22",
+    "bin": {}
 }
 ```
 
